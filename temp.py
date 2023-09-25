@@ -38,7 +38,6 @@ viddir=get_vid_dir(gender=genre)
 ###########################################################################
 # Get routes to acces files
 # 🔴🔴🔴🔴🔴 Al ejecutar el file esta ruta debe concidir con con el shell donde se ejecuto 🔴🔴🔴🔴🔴🔴🔴
-st.write(os.getcwd())
 oldpath= "/mount/src/cv_demos"
 
 folder=  oldpath + "/" + "vidsource" + "/" + viddir 
@@ -99,7 +98,7 @@ if st.sidebar.button('Crear'):
     col1.video(video_bytes1)
 
     with st.spinner('Wait for it...'):
-        time.sleep(3)
+        time.sleep(2)
     video_file2 = open(listas_ot[posinout], 'rb')
     video_bytes2 = video_file2.read()
     col2.video(video_bytes2)
