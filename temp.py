@@ -16,13 +16,13 @@ st.sidebar.write("El objetivo es probar distintas demos de proyectos de CV basad
 # Opciones de Modelos 
 genre = st.sidebar.selectbox(
     "Selecciona el modelo de CV: ⏬",
-    ('Human Pose', 'Fire Detection', 'Drowsiness', 'Emotion Detection'))
+    ('Human Pose', 'Fire Detection', 'Drowsiness', 'Emotion Detection', 'Track in Cameras' ))
 
 # ,'Count and Tracking', 'Track Across Cameras', 'Satelital Images'
 
 # Select resources
 Folder= {'hp':'Human Pose', 'fd':'Fire Detection', 'dw':'Drowsiness',
-      'cat':'Count and Tracking', 'tic':'Track in Cameras', 'ed':'Emotion Detection',
+      'cat':'Count and Tracking', 'tk':'Track in Cameras', 'ed':'Emotion Detection',
       'sat': 'Satelital Images'}
 
 # Get the gender video directory 
@@ -69,7 +69,7 @@ os.chdir(oldpath)
 ###########################################################
 # Select the options between samples, or camera and samples.
 
-if genre in ('Fire Detection','Human Pose', 'Drowsiness', 'Emotion Detection'):
+if genre in ('Fire Detection','Human Pose', 'Drowsiness', 'Emotion Detection', 'Track in Cameras'):
     Opciones= st.sidebar.selectbox('Selecciona el video muestra: ⏬',options=optin)
 else:
     Type= st.sidebar.radio('Selecciona el input: ⏬', ('Muestras', 'Cámara'),horizontal=True)
@@ -82,7 +82,7 @@ else:
 # Get index position
 # Funciona pq el orden de los inputs y outs es el mismo
 #               🔴Cambiar  al agregar más variables🔴      ######
-if genre in ('Fire Detection','Human Pose', 'Drowsiness', 'Emotion Detection'):
+if genre in ('Fire Detection','Human Pose', 'Drowsiness', 'Emotion Detection', 'Track in Cameras'):
     posinout=optin.index(Opciones)
 else:
     pass
