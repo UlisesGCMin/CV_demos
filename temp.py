@@ -74,10 +74,10 @@ if genre in ('Fire Detection','Human Pose', 'Drowsiness', 'Emotion Detection', '
 else:
     Type= st.sidebar.radio('Selecciona el input: ⏬', ('Muestras', 'Cámara'),horizontal=True)
 
-if genre in ('Fire Detection' ,'Human Pose', 'Drowsiness', 'Emotion Detection'):
+if genre in ('Fire Detection' ,'Human Pose', 'Drowsiness', 'Emotion Detection', 'Track in Cameras'):
     avi= st.write('')
 else:
-    notavi= st.image("/app/cv_demos/const.jpg")
+    notavi= st.image("/mount/src/cv_demos/const.jpg")
 
 # Get index position
 # Funciona pq el orden de los inputs y outs es el mismo
